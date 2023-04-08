@@ -391,6 +391,7 @@ function addToFavorites() {
   li.innerHTML = currentCity;
   ul.appendChild(li);
 }
+// button to see your favorite cities
 let favCities = document.querySelector(".favCities");
 favCities.addEventListener("click", showFavorites);
 
