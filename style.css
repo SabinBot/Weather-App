@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+:root {
+    --primary-color: #3696b9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background: var(--primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.wrapper {
+    display: flex;
+    overflow: hidden;
+}
+
+.sideBar {
+    width: 30%;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 20px;
+    background: linear-gradient(rgba(55,198,255,.5) 15%, rgba(85,206,255,.5) 35%, rgba(115,215,255,.5) 46%, rgba(145,224,255,.5) 100%);    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ced4da;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #495057;
+}
+
+.search input:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+
+.search button {
+    min-width: 40px;
+    height: 40px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.weatherIcon {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#conditionIconDay {
+    width: 100%;
+}
+
+.temperature {
+    display: flex;
+}
+
+.temperature #temp {
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.temperature span {
+    font-size: 40px;
+    margin-top: -15px;
+    display: block;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background: #F5F3C1;
+    margin: 20px 0;
+}
+
+.conditionRain {
+    font-size: 14px;
+}
+
+.conditionRain div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.conditionRain div i {
+    width: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 10px;
+}
+
+.main {
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #f6f6f8;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    float: right;
+}
+.favBtn, .favCities {
+    border: none;
+    background: inherit;
+}
+.fa-regular, .fa-solid {
+    font-size: 25px;
+    margin: 0 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.favBtn:hover {
+    color: #FFD966;
+    transition: .3s ease-in-out;
+}
+.favCities:hover {
+    color: #5598fd;
+    transition: .3s ease-in-out;
+}
+.favBtn {
+    color: #408E91;
+}
+.favCities {
+    color: #FFD966;
+}
+
+.main .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.cards .card {
+    width: 100px;
+    height: 130px;
+    border-radius: 20px;
+    color: #1a1a1a;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card h2 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card .cardIcon {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.hourTemp,
+.dayTemp {
+    display: flex;
+    margin: 0 auto;
+}
+
+.currentWeather {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.currentWeather .headingWeather {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.cardsCurrent {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardCurrent {
+    width: 20%;
+    height: 150px;
+    border-radius: 20px;
+    color: #1a1a1a;
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardCurrent .cardHeading {
+    color: #c2c2c2;
+}
+
+.cardCurrent .content {
+    margin-top: 30px;
+}
+
+.cardCurrent .content p:first-child {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.cardCurrent .content p:nth-child(2) {
+    font-size: 12px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.favoriteCities {
+    display: none;
+    width: 320px;
+    height: 500px;
+    text-align: left;
+    position: absolute;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    background: #FFF;
+    box-shadow: 8px 6px 10px rgba(0, 0, 0, .3);
+}
+.favoriteCities ul li {
+    list-style: none;
+    padding: 8px 6px;
+    cursor: pointer;
+}
+
+.carouselWrapper {
+    width: 100%;
+    white-space: nowrap;
+}
+
+.reserved {
+    margin: 0 auto;
+    font-size: 16px;
+    color: #c2c2c2;
+    position: absolute;
+    bottom: 10px;
+    right: 5%;
+    text-decoration: none;
+}
+.reserved:hover {
+    color: #495057;
+    font-weight: 500;
+    transition: .3s all;
+}
+
+/* Media screens */
+
+@media (min-width :1381px) {
+    .wrapper {
+        max-width: 1300px;
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1380px) {
+    .wrapper {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+    .weatherIcon {
+        max-width: 30%;
+        margin: auto;
+    }
+    .temperature #temp {
+        font-size: 3rem;
+    }
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sideBar {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .location {
+        margin-top: 20px;
+    }
+    .reserved {
+        right: 40%;
+    }
+
+    #weatherCards {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    #weatherCardsHourly {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .favoriteCities {
+        top: 50px;
+        font-weight: 700;
+        text-align: center;
+        width: 80%;
+        opacity: .9;
+    }
+
+    #weatherCards .card,
+    #weatherCardsHourly .card {
+        min-width: 100px;
+    }
+
+    .cards .card {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 250px;
+    }
+
+    .cardsCurrent {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cardCurrent {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .carouselWrapper {
+        height: 250px;
+    }
+
+    .carouselWrapper .card {
+        height: max-content;
+    }
+}

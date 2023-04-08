@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="sideBar">
+            <div>
+                <form class="search" id="search">
+                    <input type="text" id="searchInput" placeholder="Enter city name..." />
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+                <div class="weatherIcon">
+                    <p id="conditionIconDay"></p>
+                </div>
+                <div class="temperature">
+                    <h1 id="temp"></h1>
+                    <span class="tempUnit">&#176;C</span>
+                </div>
+                <div class="dateTime">
+                    <p id="dateTime">Today, 12:00</p>
+                </div>
+                <div class="separator"></div>
+                <div class="conditionRain">
+                    <div class="condition">
+                        <i class="fas fa-cloud"></i>
+                        <p id="condition">condition</p>
+                    </div>
+                    <div class="rain">
+                        <i class="fas fa-tint"></i>
+                        <p id="rain">precipitation - 0 %</p>
+                    </div>
+                </div>
+            </div>
+            <div class="location">
+                <div class="locationIcon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="locationText">
+                    <p id="location">location</p>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <nav>
+                <div class="favorite">
+                    <button class="favBtn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="star">
+                    <button class="favCities"><i class="fa-solid fa-star"></i></button>
+                </div>
+            </nav>
+            <div class="favoriteCities"></div>
+            <div class="cards" id="weatherCards"></div>
+            <div class="cards" id="weatherCardsHourly"></div>
+            <div class="currentWeather">
+                <h2 class="headingWeather">current weather</h2>
+                <div class="cardsCurrent">
+                    <div class="cardCurrent">
+                        <h4 class="cardHeading">Wind</h4>
+                        <div class="content">
+                            <p class="windSpeed">0</p>
+                            <p class="windSpeedStatus"></p>
+                        </div>
+                    </div>
+                    <div class="cardCurrent">
+                        <h4 class="cardHeading">UV</h4>
+                        <div class="content">
+                            <p class="uv"></p>
+                            <p class="uvStatus"></p>
+                        </div>
+                    </div>
+                    <div class="cardCurrent">
+                        <h4 class="cardHeading">Humidity</h4>
+                        <div class="content">
+                            <p class="humidity"></p>
+                            <p class="humidityStatus"></p>
+                        </div>
+                    </div>
+                    <div class="cardCurrent">
+                        <h4 class="cardHeading">Visibility</h4>
+                        <div class="content">
+                            <p class="visibility"></p>
+                            <p class="visibilityStatus"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class='reserved' href='https://sabinbot.com' target='_blank'>Bot Sabin</a>
+        </div>
+    </div>
+    <script src='index.js'></script>
+    <script src="carousel.js"></script>
+</body>
+
+</html>
