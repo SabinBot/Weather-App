@@ -1,4 +1,4 @@
-const temp = document.getElementById("temp"),
+let temp = document.getElementById("temp"),
   humidity = document.querySelector(".humidity"),
   wind = document.querySelector(".windSpeed"),
   uv = document.querySelector(".uv"),
