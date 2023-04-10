@@ -1,7 +1,7 @@
-let temp = document.getElementById("temp"),
+const temp = document.getElementById("temp"),
   humidity = document.querySelector(".humidity"),
   wind = document.querySelector(".windSpeed"),
-  uv = document.querySelector(".uv");
+  uv = document.querySelector(".uv"),
   visibility = document.querySelector(".visibility"),
   tempUnit = document.querySelectorAll(".tempUnit"),
   precipitation = document.getElementById("rain"),
