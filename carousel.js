@@ -1,5 +1,3 @@
-// const weatherCards = document.getElementById('weatherCards');
-// const weatherCardsHourly = document.getElementById('weatherCardsHourly');
 
 const carouselWrapper = document.createElement('div');
 carouselWrapper.className = 'carouselWrapper';
