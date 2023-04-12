@@ -68,7 +68,7 @@ function getWeatherData(unit = "c") {
         visibility.innerHTML = current.vis_km + " km";
         updateVisibiltyStatus(current.vis_km);
         precipitation.innerHTML = "Precipitation " + current.precip_mm + " %";
-        conditionIconDay.innerHTML = `<img src="${conditionIcon}" alt="Condition Icon">`;
+        conditionIconDay.innerHTML = `<img src="https:${conditionIcon}" alt="Condition Icon">`;
         condition.innerHTML = current.condition.text;
 
         changeBackground(current.condition.code); // change background 
