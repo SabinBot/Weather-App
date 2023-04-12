@@ -214,7 +214,7 @@ function searchCity(city, unit) {
       visibility.innerHTML = current.vis_km + " km";
       updateVisibiltyStatus(current.vis_km);
       precipitation.innerHTML = "Precipitation " + current.precip_mm + " %";
-      conditionIconDay.innerHTML = `<img src="${conditionIcon}" alt="Condition Icon">`;
+      conditionIconDay.innerHTML = `<img src="https:${conditionIcon}" alt="Condition Icon">`;
       condition.innerHTML = current.condition.text;
 
       let hourlyData = data.forecast.forecastday[0].hour;
